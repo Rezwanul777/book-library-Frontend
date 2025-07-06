@@ -7,12 +7,14 @@ import EditBookPage from "./pages/EditBookPage";
 import BorrowCreatePage from "./pages/BorrowCreatePage";
 import BorrowSummaryPage from "./pages/BorrowSummaryPage";
 import BookDetailsPage from "./pages/BookDetailPage";
+import Hero from "./components/Hero";
 
 
 export default function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
+      <Hero/>
       <main className="flex-grow">
         <Routes>
           <Route path="/books" element={<BooksListPage />} />
