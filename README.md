@@ -1,69 +1,65 @@
-# React + TypeScript + Vite
+🚀 Frontend Requirements
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ the frontend is to build a functional, clean, and responsive client-side application using React, Redux Toolkit Query (RTK Query), TypeScript, and Tailwind CSS (or plain CSS). The app will interact with a RESTful API backend, showcasing proper state management.
+✨ Features
+1️⃣ Public Routes
 
-Currently, two official plugins are available:
+    All pages are publicly accessible; no login or authentication is required.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    Focus solely on book management and borrowing features.
 
-## Expanding the ESLint configuration
+2️⃣ Book Management
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+    Book List Table
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+        Display all books in a table/grid layout.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+        Columns: Title, Author, Genre, ISBN, Copies, Availability, Actions.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    Actions
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+        Edit Book: Open a form pre-filled with book data; submit updates to API and reflect instantly in UI.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+            📌 Business rule: If copies = 0, mark book as unavailable.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+        Delete Book: Open confirmation dialog before deleting a book.
+
+        Borrow Book: Open a form to borrow selected book.
+
+    Add New Book
+
+        Button to open create form.
+
+        Fields: Title, Author, Genre, ISBN, Description, Copies, Available (optional, default true).
+
+        After creation: redirect to book list and update UI.
+
+3️⃣ Borrow Book
+
+    Access via Borrow button in the book list.
+
+    Fields: Quantity (number), Due Date (date).
+
+    Business logic:
+
+        Quantity must not exceed available copies.
+
+        If copies reaches 0, mark book as unavailable.
+
+    Submit via API; show success message.
+
+    Redirect to Borrow Summary.
+
+4️⃣ Borrow Summary
+
+    Show a list of borrowed books aggregated by book.
+
+    Columns: Book Title, ISBN, Total Quantity Borrowed.
+
+    Data retrieved via API aggregation.
+
+    ###Project setup
+    1. npm i from git clone
+    2. npm run dev
+    
+
