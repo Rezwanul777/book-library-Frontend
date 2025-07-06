@@ -68,7 +68,7 @@ export default function BorrowCreate() {
   };
 
   return (
-    <div className="max-w-xl mx-auto mt-10 p-6 border border-gray-300 rounded-lg shadow-md bg-white dark:bg-gray-900 dark:text-white">
+    <div className="max-w-7xl mx-auto mt-10 p-6 border border-gray-300 rounded-lg shadow-md bg-white dark:bg-gray-900 dark:text-white">
       <h1 className="text-2xl font-semibold mb-6 text-center">
         📚 Borrow Book
       </h1>

@@ -27,11 +27,22 @@ export const borrowApi = createApi({
         invalidatesTags: ["Borrow"],
       }),
     }),
+    getBorrowSummary: builder.query<{ data: Borrow[] }, void>({
+  query: () => "borrow",
+  providesTags: ["Borrow"],
+}),
 
-    getBorrowSummary: builder.query<Borrow[], void>({
-      query: () => "borrow",
-      providesTags: ["Borrow"],
-    }),
+    // getBorrowSummary: builder.query<Borrow[], void>({
+    //   query: () => "borrow",
+    //   providesTags: ["Borrow"],
+    // }),
+//     getBorrowSummary: builder.query<Borrow[], void>({
+//   query: () => "borrow",
+//   providesTags: (result) =>
+//     result
+//       ? [...result.map(({ _id }) => ({ type: "Borrow" as const, id: _id })), { type: "Borrow", id: "LIST" }]
+//       : [{ type: "Borrow", id: "LIST" }],
+// }),
   }),
 });
 

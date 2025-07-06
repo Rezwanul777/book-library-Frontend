@@ -41,7 +41,7 @@ export default function AddBook() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-8 p-5 border rounded-2xl shadow-2xl mb-4">
+    <div className="max-w-7xl mx-auto mt-8 p-5 border rounded-2xl shadow-2xl mb-4">
       <h1 className="text-xl font-semibold mb-4 text-center  dark:text-gray-800">
         Add New Book
       </h1>
