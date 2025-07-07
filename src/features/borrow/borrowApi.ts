@@ -12,7 +12,7 @@ export interface Borrow {
 export const borrowApi = createApi({
   reducerPath: "borrowApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000/api/",
+    baseUrl: "https://book-baceknd.vercel.app/api/",
   }),
   tagTypes: ["Books", "Borrow"],
   endpoints: (builder) => ({

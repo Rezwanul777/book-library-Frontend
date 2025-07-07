@@ -40,47 +40,48 @@
 
 // export default Hero
 
-import bgImage from '../../src/assets/bg.png';
+import bgImage from '../../src/assets/bg.png'
 
 const Hero = () => {
   return (
     <div className="py-6 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center">
-          
-          {/* Image */}
-          <div className="w-full md:w-1/2">
-            <img
-              src={bgImage}
-              alt="Library Hero"
-              className="w-full h-auto object-cover rounded-lg"
-            />
-          </div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col md:flex-row items-center gap-6">
+      
+      <div className="w-full md:w-1/2">
+        <img
+          src={bgImage}
+          alt="Bookshelf background representing library management"
+          className="w-full h-auto object-cover rounded-lg"
+          loading="lazy"
+        />
+      </div>
 
-          {/* Text */}
-          <div className="w-full md:w-1/2 p-6 md:p-8">
-            <div className="text-indigo-600 text-sm uppercase font-semibold tracking-wide">
-              Minimal Library Management
-            </div>
-            <h1 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900">
-              Welcome to Your Book Library
-            </h1>
-            <p className="mt-3 text-gray-600">
-              Explore books, add new ones, and keep track of borrowed books in a clean and minimal system.
-            </p>
-            <div className="mt-4">
-              <a
-                href="/books"
-                className="inline-block bg-indigo-600 text-white px-5 py-2 rounded-lg text-sm sm:text-base hover:bg-indigo-700 transition"
-              >
-                Get Started
-              </a>
-            </div>
-          </div>
-
+      <div className="w-full md:w-1/2 p-4 md:p-6">
+        <div className="text-indigo-600 md:text-2xl text-sm uppercase font-semibold tracking-wide">
+          Minimal Library Management
+        </div>
+        <h1 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900">
+          Welcome to Your Book Library
+        </h1>
+        <p className="mt-3 text-gray-600">
+          Explore books, add new ones, and keep track of borrowed books in a clean and minimal system.
+        </p>
+        <div className="mt-4">
+          <a
+            href="/books"
+            className="inline-block bg-indigo-600 text-white px-5 py-2 rounded-lg text-sm sm:text-base hover:bg-indigo-700 transition"
+          >
+            Get Started
+          </a>
         </div>
       </div>
+
     </div>
+  </div>
+</div>
+
+
   );
 };
 
